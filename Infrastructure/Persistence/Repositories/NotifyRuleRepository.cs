@@ -6,8 +6,8 @@ namespace Infrastructure.Persistence.Repositories;
 
 public class NotifyRuleRepository(StockShortageDbContext dbContext) : INotifyRuleRepository
 {
-    public async Task<List<NotifyRule>> GetAllAsync()
+    public async Task<List<NotifyRule>> GetAllAsync(CancellationToken cancellationToken)
     {
-        return await dbContext.NotifyRules.ToListAsync();
+        return await dbContext.NotifyRules.ToListAsync(cancellationToken);
     }
 }
