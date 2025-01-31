@@ -1,9 +1,6 @@
-using Application.Common.Events;
-using Application.NotifyRule.CheckStock;
-using Domain.NotifyRule.Contracts;
+using Domain.NotifyRules.Contracts;
 using Domain.Persistence;
-using Domain.Product.Contracts;
-using Infrastructure.Events;
+using Domain.Products.Contracts;
 using Infrastructure.Persistence.Repositories;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;

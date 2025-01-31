@@ -1,6 +1,6 @@
-using Domain.NotifyRule.Entities;
+using Domain.NotifyRules.Entities;
 using Domain.Persistence;
-using Domain.Product.Entities;
+using Domain.Products.Entities;
 using Infrastructure.Persistence.Configurations;
 using Microsoft.EntityFrameworkCore;
 

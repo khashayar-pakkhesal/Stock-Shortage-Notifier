@@ -9,7 +9,5 @@ public static class EventConfiguration
     public static void AddEventHandlers(this IServiceCollection services)
     {        
         services.AddTransient<IEventDispatcher, EventDispatcher>();
-        
-        services.AddTransient<IEventHandler<CheckStockEvent>, CheckStockEventHandler>();
     }
 }

@@ -1,6 +1,5 @@
 using Domain.Common.ValueObjects;
-using Domain.NotifyRule.Entities;
-using Domain.ValueObjects;
+using Domain.NotifyRules.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

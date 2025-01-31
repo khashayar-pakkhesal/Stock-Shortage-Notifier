@@ -1,8 +1,7 @@
 using Domain.Common.ValueObjects;
 using Domain.Entities;
-using Domain.ValueObjects;
 
-namespace Domain.Product.Entities;
+namespace Domain.Products.Entities;
 
 public class Product : Entity
 {

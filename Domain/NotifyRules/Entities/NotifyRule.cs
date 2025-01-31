@@ -1,8 +1,8 @@
 using Domain.Common.ValueObjects;
 using Domain.Entities;
-using Domain.ValueObjects;
+using Domain.Products.Entities;
 
-namespace Domain.NotifyRule.Entities;
+namespace Domain.NotifyRules.Entities;
 
 public class NotifyRule : Entity
 {
@@ -20,9 +20,8 @@ public class NotifyRule : Entity
     public string Name { get; set; }
     public Quantity ViableQuantity { get; set; }
 
-    public void Validate(Quantity amount)
+    public bool IsSatisfied(Quantity amount)
     {
-        if (ViableQuantity != amount)
-            throw new Exception($"ViableQuantity is not equal to amount by Rule {Name}");
+        return ViableQuantity.Value <= amount.Value;
     }
 }
