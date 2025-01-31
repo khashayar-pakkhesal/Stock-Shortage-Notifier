@@ -17,4 +17,9 @@ public class ProductRepository(StockShortageDbContext dbContext) : IProductRepos
             .Where(x => x.Id == productId)
             .FirstAsync(cancellationToken);
     }
+
+    public async Task AddAsync(Product product, CancellationToken cancellationToken)
+    {
+        await dbContext.Products.AddAsync(product, cancellationToken);
+    }
 }

@@ -10,4 +10,9 @@ public class NotifyRuleRepository(StockShortageDbContext dbContext) : INotifyRul
     {
         return await dbContext.NotifyRules.ToListAsync(cancellationToken);
     }
+
+    public async Task AddAsync(NotifyRule product, CancellationToken cancellationToken)
+    {
+        await dbContext.NotifyRules.AddAsync(product, cancellationToken);
+    }
 }
