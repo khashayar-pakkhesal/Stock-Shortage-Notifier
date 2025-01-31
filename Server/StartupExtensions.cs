@@ -54,6 +54,7 @@ public static class StartupExtensions
         if (!dbContext.Products.Any())
         {
             dbContext.Products.Add(new Product("Books", Quantity.Create(15)));
+            dbContext.Products.Add(new Product("Watches", Quantity.Create(25)));
             dbContext.SaveChanges();
         }
     }
