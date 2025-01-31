@@ -1,7 +1,8 @@
+using Domain.Common.ValueObjects;
 using Domain.Entities;
 using Domain.ValueObjects;
 
-namespace Domain.NotifyRule.Models;
+namespace Domain.NotifyRule.Entities;
 
 public class NotifyRule : Entity
 {
@@ -13,6 +14,7 @@ public class NotifyRule : Entity
     {
         Name = name;
         ViableQuantity = viableQuantity;
+        CreationDateTime = DateTime.Now;
     }
 
     public string Name { get; set; }

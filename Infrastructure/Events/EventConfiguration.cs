@@ -1,6 +1,5 @@
 using Application.Common.Events;
 using Application.NotifyRule.CheckStock;
-using Domain.NotifyRule.Models;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Infrastructure.Events;

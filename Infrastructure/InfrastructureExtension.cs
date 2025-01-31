@@ -1,13 +1,16 @@
 using Infrastructure.Events;
 using Infrastructure.Persistence;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Infrastructure;
 
 public static class InfrastructureExtension
 {
-    public static void AddInfrastructure(this IServiceCollection services)
+    public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddEventHandlers();
+        services.AddDatabase(configuration);
+        services.AddRepositories();
     }
 }
