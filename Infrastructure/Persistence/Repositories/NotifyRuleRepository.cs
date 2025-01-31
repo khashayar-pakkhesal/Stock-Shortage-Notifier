@@ -1,12 +1,13 @@
-using Domain.NotifyRule.Contracts;
-using Domain.NotifyRule.Entities;
+using Domain.NotifyRules.Contracts;
+using Domain.NotifyRules.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Persistence.Repositories;
 
-public class NotifyRuleRepository : INotifyRuleRepository
+public class NotifyRuleRepository(StockShortageDbContext dbContext) : INotifyRuleRepository
 {
-    public List<NotifyRule> GetAll()
+    public async Task<List<NotifyRule>> GetAllAsync()
     {
-        throw new NotImplementedException();
+        return await dbContext.NotifyRules.ToListAsync();
     }
 }
