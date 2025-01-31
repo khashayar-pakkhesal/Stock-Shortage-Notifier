@@ -19,4 +19,6 @@ Architected with Clean architecture and Domain Driven Design and EDA for applica
 	 
    Alternatives: Command Pattern, MediatR, RabbitMQ, Kafka
     
-
+# How to Run 
+navigate to project and run the following command
+'docker compose -f ./compose.yaml  -p stock-shortage-notifier up -d'
