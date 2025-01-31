@@ -14,6 +14,7 @@ public class NotifyRule : Entity
     {
         Name = name;
         ViableQuantity = viableQuantity;
+        CreationDateTime = DateTime.Now;
     }
 
     public string Name { get; set; }

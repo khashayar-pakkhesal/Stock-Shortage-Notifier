@@ -14,6 +14,7 @@ public class Product : Entity
     {
         Name = name;
         Quantity = quantity;
+        CreationDateTime = DateTime.Now;
     }
 
     public string Name { get; set; }
