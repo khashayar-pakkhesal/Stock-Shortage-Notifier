@@ -13,15 +13,19 @@ public class CheckStockEventHandler(
 {
     public async Task HandleEvent(CheckStockEvent publishedEvent, CancellationToken cancellationToken = default)
     {
-        var rules = await notifyRuleRepository.GetAllAsync();
-        var products = await productRepository.GetAllAsync();
+        var rules = await notifyRuleRepository.GetAllAsync(cancellationToken);
+        var products = await productRepository.GetAllAsync(cancellationToken);
 
         foreach (var rule in rules)
         {
             foreach (var product in products)
             {
                 if (rule.IsSatisfied(product.Quantity))
+                {
+                    await notificationService.SendAsync(
+                        $"Rule({rule.Name}) We have enough of {product.Name} there is {product.Quantity.Value} in stock");
                     continue;
+                }
 
                 await notificationService.SendAsync(
                     $"Rule({rule.Name}) We are running low on {product.Name} there is only {product.Quantity.Value} left");
