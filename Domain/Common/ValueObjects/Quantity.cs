@@ -1,5 +1,3 @@
-using Domain.ValueObjects;
-
 namespace Domain.Common.ValueObjects;
 
 public class Quantity : ValueObject<Quantity>, IComparable<Quantity>
