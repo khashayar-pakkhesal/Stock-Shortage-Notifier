@@ -1,7 +1,7 @@
 using System.Reflection;
 using Domain.Common.ValueObjects;
-using Domain.NotifyRule.Entities;
-using Domain.Product.Entities;
+using Domain.NotifyRules.Entities;
+using Domain.Products.Entities;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
