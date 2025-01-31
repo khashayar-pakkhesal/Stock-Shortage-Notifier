@@ -1,5 +1,6 @@
 using Infrastructure.Events;
 using Infrastructure.Persistence;
+using Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -12,5 +13,6 @@ public static class InfrastructureExtension
         services.AddEventHandlers();
         services.AddDatabase(configuration);
         services.AddRepositories();
+        services.AddNotificationService();
     }
 }
