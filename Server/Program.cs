@@ -1,3 +1,4 @@
+using Application;
 using Infrastructure;
 using Server;
 
@@ -20,6 +21,8 @@ builder.Services.AddEndpoints();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddApplication();
+
 
 
 var app = builder.Build();
