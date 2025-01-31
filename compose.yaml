@@ -11,6 +11,7 @@
     depends_on:
       - stockDb
     environment:
+      - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__DefaultConnection=Server=stockDb,1433;Database=StockShorageNotifier;User Id=sa;Password=12345678@aA;Trusted_Connection=False;MultipleActiveResultSets=true;TrustServerCertificate=true
   stockDb:
     container_name: "stockDb"
