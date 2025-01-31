@@ -15,7 +15,7 @@ Architected with Clean architecture and Domain Driven Design and EDA for applica
 
 3- using the most suitable architecture for the Application layer
 
-   Decision: I used Event-Driven Architecture for the application layer since it helped for more scalability and throwing events and also it's scalable for managing lots of events with lotf of handlers
+   Decision: I used Event-Driven Architecture for the application layer since it helped for more scalability and throwing events and also it's scalable for managing lots of events with lots of handlers
 	 
    Alternatives: Command Pattern, MediatR, RabbitMQ, Kafka
     
