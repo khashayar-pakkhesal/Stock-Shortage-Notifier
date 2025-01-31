@@ -29,7 +29,17 @@ public class Quantity : ValueObject<Quantity>, IComparable<Quantity>
     {
         if (other is null)
             throw new ArgumentNullException(nameof(other));
-        
+
         return Value.CompareTo(other.Value);
+    }
+
+    public static Quantity operator +(Quantity a, Quantity b)
+    {
+        return Create(a.Value + b.Value);
+    }
+
+    public static Quantity operator -(Quantity a, Quantity b)
+    {
+        return Create(a.Value - b.Value);
     }
 }

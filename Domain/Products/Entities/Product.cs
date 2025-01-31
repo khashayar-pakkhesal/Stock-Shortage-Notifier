@@ -18,4 +18,15 @@ public class Product : Entity
 
     public string Name { get; set; }
     public Quantity Quantity { get; set; }
+
+
+    public void IncreaseQuantity(Quantity quantity)
+    {
+        Quantity += quantity;
+    }
+
+    public void DecreaseQuantity(Quantity quantity)
+    {
+        Quantity -= quantity;
+    }
 }
