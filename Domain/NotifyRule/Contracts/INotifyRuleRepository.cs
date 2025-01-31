@@ -1,5 +1,5 @@
 namespace Domain.NotifyRule.Contracts;
-using NotifyRule = Models.NotifyRule;
+using NotifyRule = Entities.NotifyRule;
 
 public interface INotifyRuleRepository
 {

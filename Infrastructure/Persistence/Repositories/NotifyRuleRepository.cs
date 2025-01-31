@@ -1,5 +1,5 @@
 using Domain.NotifyRule.Contracts;
-using Domain.NotifyRule.Models;
+using Domain.NotifyRule.Entities;
 
 namespace Infrastructure.Persistence.Repositories;
 
