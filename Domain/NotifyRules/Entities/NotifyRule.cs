@@ -17,8 +17,8 @@ public class NotifyRule : Entity
         CreationDateTime = DateTime.Now;
     }
 
-    public string Name { get; set; }
-    public Quantity ViableQuantity { get; set; }
+    public string Name { get; private set; }
+    public Quantity ViableQuantity { get; private set; }
 
     public bool IsSatisfied(Quantity amount)
     {

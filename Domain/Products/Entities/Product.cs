@@ -16,8 +16,8 @@ public class Product : Entity
         CreationDateTime = DateTime.Now;
     }
 
-    public string Name { get; set; }
-    public Quantity Quantity { get; set; }
+    public string Name { get; private set; }
+    public Quantity Quantity { get; private set; }
 
 
     public void IncreaseQuantity(Quantity quantity)
