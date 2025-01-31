@@ -1,0 +1,27 @@
+﻿services:
+  server:
+    container_name: stock-shortage-notifier
+    image: server
+    ports:
+      - "5009:8080"
+    build:
+      context: .
+      dockerfile: Server/Dockerfile
+      
+    depends_on:
+      - stockDb
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=stockDb,1433;Database=StockShorageNotifier;User Id=sa;Password=12345678@aA;Trusted_Connection=False;MultipleActiveResultSets=true;TrustServerCertificate=true
+  stockDb:
+    container_name: "stockDb"
+    image: "mcr.microsoft.com/azure-sql-edge"
+    ports:
+      - "1433:1433"
+    volumes:
+      - /volumes/db-1
+    environment:
+      SA_PASSWORD: "12345678@aA"
+      ACCEPT_EULA: "Y"
+      TZ: "TZ=Asia/Tehran"
+    restart: always
